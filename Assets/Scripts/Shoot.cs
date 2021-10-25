@@ -11,13 +11,12 @@ public class Shoot : MonoBehaviour
     public Ray ray;
     public RaycastHit hit;
     public GameObject crosshair;
-    public GameObject distant;
     public float heading;
-    public Button shoots; 
     private float nextFire = 0f;
     private float fireRate = 1;
     bool isClicked;
     private int patron = 0;
+    private int maxpatron = 120;
     private Text ammo;
 
     private EnemyHP _enemyHp;
@@ -26,9 +25,7 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         ammo = GameObject.FindGameObjectWithTag("AmmoUI").GetComponent<Text>();
-        shoots = GameObject.FindGameObjectWithTag("Shoot").GetComponent<Button>();
         crosshair = GameObject.FindGameObjectWithTag("Crosshair");
-        distant = GameObject.FindGameObjectWithTag("Enemy");
     }
     
     // Update is called once per frame
@@ -36,7 +33,7 @@ public class Shoot : MonoBehaviour
     {
         
         shoot();
-        ammo.text = "Патронов:"+patron + "/30";
+        ammo.text = "Патронов:"+ patron + "/" + maxpatron;
     }
     public void TaskOnClick() 
     {
@@ -54,24 +51,42 @@ public class Shoot : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(crosshair.transform.position);
             nextFire = Time.time + 0.1f / fireRate;
             if (Physics.Raycast(ray, out hit))
-                {
+            {
                     heading = Vector3.Distance(hit.transform.position ,gameObject.transform.position);
                     if (hit.transform.CompareTag("Enemy") && heading < 30 )
-                    { 
-                        Debug.Log(hit.collider.name);
+                    {
                         _enemyHp = GameObject.Find(hit.collider.name).GetComponent<EnemyHP>();
                         _enemyHp.healthpoint = _enemyHp.healthpoint - Random.Range(10, 15);
                     }
-                }
+            }
         }
         
     }
 
     public void Reload()
     {
-        if (patron == 0)
+        if (patron > 0 && maxpatron > 30)
         {
+            maxpatron = maxpatron - 30;
             patron = 30;
+        }
+
+        if (patron == 0 && maxpatron > 30)
+        {
+            maxpatron = maxpatron - 30;
+            patron = 30;
+        }
+
+        if (patron == 0 && maxpatron <= 30)
+        {
+            patron = maxpatron;
+            maxpatron = 0;
+        }
+
+        if (patron > 0 && maxpatron <= 30)
+        {
+            patron = maxpatron;
+            maxpatron = 0;
         }
     }
 }
