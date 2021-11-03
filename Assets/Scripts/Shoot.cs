@@ -56,7 +56,7 @@ public class Shoot : MonoBehaviour
                     if (hit.transform.CompareTag("Enemy") && heading < 30 )
                     {
                         _enemyHp = GameObject.Find(hit.collider.name).GetComponent<EnemyHP>();
-                        _enemyHp.healthpoint = _enemyHp.healthpoint - Random.Range(10, 15);
+                        _enemyHp.healthpoint = _enemyHp.healthpoint - Random.Range(35, 50);
                     }
             }
         }

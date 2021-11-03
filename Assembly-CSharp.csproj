@@ -54,17 +54,19 @@
   <ItemGroup>
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+     <Compile Include="Assets\PBR_Grass_Textures\Scripts\CameraFreeflight.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+     <Compile Include="Assets\Cars\Scripts\CarsMenu.cs" />
+     <Compile Include="Assets\Cars\Scripts\CarView.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\EnemyHP.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
-     <Compile Include="Assets\Cars\Scripts\CarsMenu.cs" />
-     <Compile Include="Assets\Cars\Scripts\CarView.cs" />
-     <Compile Include="Assets\PBR_Grass_Textures\Scripts\CameraFreeflight.cs" />
+     <Compile Include="Assets\Scripts\AgentScript.cs" />
+     <Compile Include="Assets\Scripts\Spawn.cs" />
      <None Include="Assets\CS - Signs Free\Standard 2 Sided.shader" />
      <None Include="Assets\laxer tree pkg\README.txt" />
      <None Include="Assets\CS - Signs Free\Readme.txt" />
