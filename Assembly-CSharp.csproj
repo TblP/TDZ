@@ -64,9 +64,10 @@
      <Compile Include="Assets\Scripts\EnemyHP.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+     <Compile Include="Assets\Scripts\Spawn.cs" />
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
      <Compile Include="Assets\Scripts\AgentScript.cs" />
-     <Compile Include="Assets\Scripts\Spawn.cs" />
+     <Compile Include="Assets\Scripts\Waves.cs" />
      <None Include="Assets\CS - Signs Free\Standard 2 Sided.shader" />
      <None Include="Assets\laxer tree pkg\README.txt" />
      <None Include="Assets\CS - Signs Free\Readme.txt" />
