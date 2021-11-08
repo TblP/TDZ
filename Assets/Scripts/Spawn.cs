@@ -24,20 +24,22 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*/
         if (check2)
         {
             b = Random.Range(1, 5); 
             spawnEnemy();
         }
-        
+        /*/
     }
 
     void FixedUpdate()
     {
+        /*/
         if (check && GameObject.FindGameObjectWithTag("Enemy"))
         {
             changeName();
-        }
+        }/*/
 
     }
     void spawnEnemy()
@@ -57,8 +59,7 @@ public class Spawn : MonoBehaviour
         {
             q+=2;
             enemyPrefabsOnMap[c].name = "enemy" + q;
-            time = Time.fixedTime;
-            if (TimerState == 0)
+            if (enemyPrefabsOnMap.Length == b * 3)
             {
                 check2 = false;
                 check = false;

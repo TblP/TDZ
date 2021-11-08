@@ -21,6 +21,7 @@ public class Waves : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        /*/
         if (_spawn.check == false && GameObject.FindGameObjectWithTag("Enemy") == false)
         {
             numWave += 1;
@@ -28,6 +29,15 @@ public class Waves : MonoBehaviour
             _spawn.check = true;
             _spawn.check2 = true;
             _spawn.i = 0;
+        }/*/
+        switch (numWave)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
         }
     }
 }
