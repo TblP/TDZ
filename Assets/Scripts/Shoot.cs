@@ -53,7 +53,7 @@ public class Shoot : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                     heading = Vector3.Distance(hit.transform.position ,gameObject.transform.position);
-                    if (hit.transform.CompareTag("Enemy") && heading < 30 )
+                    if (hit.transform.CompareTag("Enemy") && heading < 100 )
                     {
                         _enemyHp = GameObject.Find(hit.collider.name).GetComponent<EnemyHP>();
                         _enemyHp.healthpoint = _enemyHp.healthpoint - Random.Range(35, 50);
