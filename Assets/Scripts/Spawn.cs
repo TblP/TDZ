@@ -10,7 +10,7 @@ public class Spawn : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public GameObject[] enemyPrefabsOnMap;
     public int i;
-    private int b;
+    public int b;
     public bool check = true;
     public bool check2 = true;
     private int q;
@@ -42,7 +42,7 @@ public class Spawn : MonoBehaviour
         }/*/
 
     }
-    void spawnEnemy()
+    public void spawnEnemy()
     {
         if (i <= b)
         {
@@ -52,7 +52,7 @@ public class Spawn : MonoBehaviour
         } 
     }
 
-    void changeName()
+    public void changeName()
     {
         enemyPrefabsOnMap = GameObject.FindGameObjectsWithTag("Enemy");
         for (int c = 0; c < enemyPrefabsOnMap.Length; c++)

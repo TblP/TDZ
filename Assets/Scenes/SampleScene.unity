@@ -2674,7 +2674,7 @@ GameObject:
   - component: {fileID: 362192999}
   - component: {fileID: 362193000}
   m_Layer: 0
-  m_Name: Spawner (2)
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2692,7 +2692,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &362193000
 MonoBehaviour:
@@ -2710,6 +2710,7 @@ MonoBehaviour:
   - {fileID: 9207829343061279101, guid: e0e95ec4b7f97b6419b32631f3a7b82c, type: 3}
   enemyPrefabsOnMap: []
   i: 0
+  b: 0
   check: 1
   check2: 1
 --- !u!4 &365192146 stripped
@@ -4351,7 +4352,7 @@ GameObject:
   - component: {fileID: 689131885}
   - component: {fileID: 689131886}
   m_Layer: 0
-  m_Name: Spawner (1)
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4387,6 +4388,7 @@ MonoBehaviour:
   - {fileID: 9207829343061279101, guid: e0e95ec4b7f97b6419b32631f3a7b82c, type: 3}
   enemyPrefabsOnMap: []
   i: 0
+  b: 0
   check: 1
   check2: 1
 --- !u!1 &705507993
@@ -8311,9 +8313,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8cab8b81e806d2419b7df885e7827ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawn: {fileID: 0}
-  _waves: {fileID: 0}
+  _spawn:
+  - {fileID: 362193000}
+  - {fileID: 1708780284}
+  - {fileID: 689131886}
+  _waves: {fileID: 1446226727}
   numWave: 0
+  spawn: 1
 --- !u!1001 &1453797594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9841,7 +9847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1708780284
 MonoBehaviour:
@@ -9859,6 +9865,7 @@ MonoBehaviour:
   - {fileID: 9207829343061279101, guid: e0e95ec4b7f97b6419b32631f3a7b82c, type: 3}
   enemyPrefabsOnMap: []
   i: 0
+  b: 0
   check: 1
   check2: 1
 --- !u!1001 &1709511762
