@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Waves : MonoBehaviour
 {
+    public Shoot _shoot;
     public Spawn[] _spawn;
     public Text _waves;
     public int numWave;
@@ -15,7 +16,8 @@ public class Waves : MonoBehaviour
     void Start()
     {
         numWave = 1;
-        //_spawn = GameObject.Find("Spawner").GetComponent<Spawn[]>();
+        _shoot = GameObject.Find("Gun").GetComponent<Shoot>();
+        //_spawn = GameObject.Find("Spawner").GetComponent<Spawn[]>(); 
         //_waves = GetComponent<Text>();
         _spawn[0].b = Random.Range(1, 10);
         _spawn[1].b = Random.Range(1, 10);
@@ -25,15 +27,6 @@ public class Waves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*/
-        if (_spawn.check == false && GameObject.FindGameObjectWithTag("Enemy") == false)
-        {
-            numWave += 1;
-            _waves.text = "Волна: " + numWave + "/" + maxWave;
-            _spawn.check = true;
-            _spawn.check2 = true;
-            _spawn.i = 0;
-        }/*/
         switch (numWave)
         {
             case 1:
@@ -61,6 +54,7 @@ public class Waves : MonoBehaviour
                     _spawn[1].i = 0;
                     _spawn[2].i = 0;
                     spawn = true;
+                    _shoot.maxpatron = 120;
                     numWave = 2;
                 }
 
@@ -89,6 +83,7 @@ public class Waves : MonoBehaviour
                     _spawn[1].i = 0;
                     _spawn[2].i = 0;
                     spawn = true;
+                    _shoot.maxpatron = 120;
                     numWave = 3;
                 }
 

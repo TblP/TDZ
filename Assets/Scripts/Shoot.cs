@@ -16,7 +16,7 @@ public class Shoot : MonoBehaviour
     private float fireRate = 1;
     bool isClicked;
     private int patron = 0;
-    private int maxpatron = 120;
+    public int maxpatron = 120;
     private Text ammo;
 
     private EnemyHP _enemyHp;
