@@ -68,6 +68,9 @@
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
      <Compile Include="Assets\Scripts\Waves.cs" />
      <Compile Include="Assets\Scripts\AgentScript.cs" />
+     <Compile Include="Assets\Scripts\HealthPoint.cs" />
+     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Lose.cs" />
      <None Include="Assets\CS - Signs Free\Standard 2 Sided.shader" />
      <None Include="Assets\laxer tree pkg\README.txt" />
      <None Include="Assets\CS - Signs Free\Readme.txt" />

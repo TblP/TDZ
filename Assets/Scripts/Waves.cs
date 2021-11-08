@@ -43,7 +43,6 @@ public class Waves : MonoBehaviour
                 {
                     spawn = false;
                 }
-                Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length);
                 if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
                 {
                     //Thread.Sleep(5000);
